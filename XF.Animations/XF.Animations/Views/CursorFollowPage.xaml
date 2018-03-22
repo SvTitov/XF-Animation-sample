@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.Animations.Views.CursorFollowPage"
+             Title="Drag">
+    <ContentPage.Content>
+        <AbsoluteLayout
+            x:Name="_aLayout"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Image
+                x:Name="_ball"
+                Source="ball.png"
+                HeightRequest="50"
+                WidthRequest="50"/>
+            <AbsoluteLayout.GestureRecognizers>
+                <PanGestureRecognizer
+                    PanUpdated="OnPanUpdated"/>
+            </AbsoluteLayout.GestureRecognizers>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
